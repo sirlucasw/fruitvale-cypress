@@ -1,0 +1,18 @@
+{
+  "name": "fruitvale-cypress",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:auth": "cypress run --spec cypress/e2e/01-autenticacao/**",
+    "test:funcional": "cypress run --spec cypress/e2e/02-funcionalidades/**",
+    "test:api": "cypress run --spec cypress/e2e/03-api/**",
+    "test:regressao": "cypress run --env ambiente=stg --spec cypress/e2e/04-regressao/**",
+    "test:ui": "cypress run --spec cypress/e2e/05-usabilidade-ui/**",
+    "test:smoke": "cypress run --env ambiente=prod --spec cypress/e2e/07-smoke/**",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge"
+  },
+  "devDependencies": { "cypress": "^15.0.0" }
+}
